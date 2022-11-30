@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D playerRigidbody;
+    [SerializeField] InteractionController interactor;
     [SerializeField] float moveSpeed = 2f;
+    Rigidbody2D playerRigidbody;
     float inputHorizontal;
     float inputVertical;
 
@@ -18,6 +19,11 @@ public class PlayerController : MonoBehaviour
     {
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            interactor.CallObjectInteraction();
+        }
     }
 
     void FixedUpdate()
