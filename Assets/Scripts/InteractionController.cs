@@ -28,6 +28,7 @@ public class InteractionController : MonoBehaviour
     {
         if (other.transform.gameObject.GetComponent<InteractableClass>())
         {
+            interactableObjectInRange = null;
             other.transform.gameObject.GetComponent<InteractableClass>().isInInteractionRange = false;
             Debug.Log("leaving collision");
         }

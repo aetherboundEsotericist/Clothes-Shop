@@ -32,5 +32,11 @@ public class InteractableClass : MonoBehaviour
     public void Interact()
     {
         Debug.Log("Interaction!");
+        ShopManager shop = GetComponentInParent<ShopManager>();
+        for(int i = 0; i < shop.shopInventory.Container.Count; i++)
+        {
+            Debug.Log("Object in slot 1: " + shop.shopInventory.InspectItemInSlot(i));
+            shop.shopInventory.AddItem(shop.shopInventory.Container[i].item, 1);
+        }
     }
 }
