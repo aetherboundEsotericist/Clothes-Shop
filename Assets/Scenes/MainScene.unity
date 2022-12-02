@@ -242,7 +242,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.23331259, g: 0.46226418, b: 0.3143815, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -540,8 +540,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 2118473749}
-  shopInventory: {fileID: 0}
-  shopHideMenu: {fileID: 0}
+  shopInventory: {fileID: 1142669935}
+  shopHideMenu: {fileID: 1930297480}
 --- !u!114 &1142669937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05e5ff3dd3384ac478b332afcf45ea01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopInventory: {fileID: 0}
+  shopInventory: {fileID: 1142669935}
   item1: {fileID: 11400000, guid: af97a76249d3ca049a5ef1d9e46fbd74, type: 2}
   item1Amount: 2
   item2: {fileID: 11400000, guid: 32faa772f75a3e74a865d8aebaf800d3, type: 2}
@@ -1192,19 +1192,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2529582086747565858, guid: 9140834f9990a954e98d045b512d4793, type: 3}
   m_PrefabInstance: {fileID: 2529582086550041803}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2118473743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118473737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4893e2fae20d2b64281c3947ab180600, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 11400000, guid: 083b4d0a58a3bc643a04cd1fdd1ace5c, type: 2}
 --- !u!4 &2118473748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2529582086747565862, guid: 9140834f9990a954e98d045b512d4793, type: 3}

@@ -40,7 +40,7 @@ public class TradeManager : MonoBehaviour
             shopInventory.RemoveItem(shopInventory.inventory[slotPosition].itemData, false);
 
             // Forces a refresh of both inventories after the trade is done. (Not working, only first refresh is called)
-            //ExternalRefreshInventory?.Invoke(shopInventory.internalInventoryID);
+            ExternalRefreshInventory?.Invoke(shopInventory.internalInventoryID);
             //ExternalRefreshInventory?.Invoke(playerInventory.internalInventoryID);
         }
     }
