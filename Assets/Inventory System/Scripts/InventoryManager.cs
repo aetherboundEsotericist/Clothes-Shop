@@ -5,8 +5,9 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     [SerializeField] public int interfaceInventoryID;
+    [SerializeField] public bool isNPCShop;
     public GameObject slotPrefab;
-    // Inventory is currently limited to 12. Size must be set here.
+    // Inventory is currently hard limited to 12. Size must be set here.
     public List<InventorySlotManager> inventorySlots = new List<InventorySlotManager>(12);
 
     private void OnEnable()
@@ -39,12 +40,12 @@ public class InventoryManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("IDs don't match, interface is: " + interfaceInventoryID + "and internal is: " + internalInventoryID);
+        Debug.Log("IDs match, interface is: " + interfaceInventoryID + "and internal is: " + internalInventoryID);
         ResetInventory();
 
         for (int i = 0; i < inventorySlots.Capacity; i++)
         {
-            CreateInventorySlot();
+            CreateInventorySlot(i);
         }
 
         for (int i = 0; i < inventorySlots.Count; i++)
@@ -53,10 +54,11 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    void CreateInventorySlot()
+    void CreateInventorySlot(int _slotPosition)
     {
         GameObject newSlot = Instantiate(slotPrefab);
         newSlot.transform.SetParent(transform, false);
+        newSlot.GetComponent<InventorySlotManager>().slotPosition = _slotPosition;
 
         InventorySlotManager newSlotComponent = newSlot.GetComponent<InventorySlotManager>();
         newSlotComponent.ClearSlot();

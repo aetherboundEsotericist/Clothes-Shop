@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8f4240e064942741a494c7976ceeacb, type: 3}
-  m_Name: Hat
+  m_Name: Shirt
   m_EditorClassIdentifier: 
-  displayName: Hat
-  itemPrice: 50
-  displayIcon: {fileID: 21300000, guid: 5b7f664b515582d458717c354f6be292, type: 3}
+  displayName: Shirt
+  itemPrice: 75
+  displayIcon: {fileID: 21300000, guid: 312df9440efd5df4ea8f6c98591d6b96, type: 3}

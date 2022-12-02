@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] InteractionController interactor;
     [SerializeField] float moveSpeed = 2f;
+    [SerializeField] GameObject inventoryInterface;
     Rigidbody2D playerRigidbody;
     float inputHorizontal;
     float inputVertical;
@@ -23,6 +24,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             interactor.CallObjectInteraction();
+        }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            Debug.Log("Abre/fecha inventário eeee");
+
+            inventoryInterface.GetComponent<HideMenu>().ToggleHide(GetComponentInParent<InventoryScript>().internalInventoryID);
         }
     }
 

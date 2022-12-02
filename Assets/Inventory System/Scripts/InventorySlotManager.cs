@@ -7,6 +7,7 @@ using TMPro;
 
 public class InventorySlotManager : MonoBehaviour
 {
+    public int slotPosition;
     public Image itemIcon;
     public TextMeshProUGUI itemStackSize;
 
@@ -29,7 +30,5 @@ public class InventorySlotManager : MonoBehaviour
 
         itemIcon.sprite = item.itemData.displayIcon;
         itemStackSize.text = item.stackSize.ToString("n0");
-
-
     }
 }

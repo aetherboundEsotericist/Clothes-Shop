@@ -8,6 +8,7 @@ public class InteractableClass : MonoBehaviour
 {
     SpriteRenderer speechBubbleSprite;
     [SerializeField] ItemData itemToGive;
+    [SerializeField] GameObject inventoryInterface;
 
     public bool isInInteractionRange;
 
@@ -34,8 +35,9 @@ public class InteractableClass : MonoBehaviour
     {
         Debug.Log("Interaction!");
 
-        // This script is attached to the Interactable, the inventory belongs to the parent NPC.
-        InventoryScript shopInventory = GetComponentInParent<InventoryScript>();
-        shopInventory.AddItem(itemToGive);
+        // Toggles this menu's visibility. Also passes it's ID so it can refresh.
+        inventoryInterface.GetComponent<HideMenu>().ToggleHide(GetComponentInParent<InventoryScript>().internalInventoryID);
+        
+        //shopInventory.AddItem(itemToGive);
     }
 }
