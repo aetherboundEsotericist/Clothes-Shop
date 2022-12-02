@@ -15,7 +15,7 @@ public class ItemButtonLogic : MonoBehaviour
     public static event Action<ItemData, int> OnExternalRemoveCall;
     public static event Action<int> OnExternalInspectCall;
     public static event Action<int> OnExternalTradeAttempt;
-    public static event Action<bool> onExternalCheckShopVisible;
+    public static event Action<int> onExternalEquipItem;
 
     void Start()
     {
@@ -50,7 +50,9 @@ public class ItemButtonLogic : MonoBehaviour
         {
             Debug.Log("This belongs to the player");
             Debug.Log("Slot position: " + GetComponentInParent<InventorySlotManager>().slotPosition);
-            
+
+            onExternalEquipItem?.Invoke(GetComponentInParent<InventorySlotManager>().slotPosition);
+
         }
     }
 }
