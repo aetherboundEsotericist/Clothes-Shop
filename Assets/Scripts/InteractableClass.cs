@@ -7,6 +7,7 @@ using UnityEngine;
 public class InteractableClass : MonoBehaviour
 {
     SpriteRenderer speechBubbleSprite;
+    [SerializeField] ItemData itemToGive;
 
     public bool isInInteractionRange;
 
@@ -32,11 +33,9 @@ public class InteractableClass : MonoBehaviour
     public void Interact()
     {
         Debug.Log("Interaction!");
-        ShopManager shop = GetComponentInParent<ShopManager>();
-        for(int i = 0; i < shop.shopInventory.Container.Count; i++)
-        {
-            Debug.Log("Object in slot 1: " + shop.shopInventory.InspectItemInSlot(i));
-            shop.shopInventory.AddItem(shop.shopInventory.Container[i].item, 1);
-        }
+
+        // This script is attached to the Interactable, the inventory belongs to the parent NPC.
+        InventoryScript shopInventory = GetComponentInParent<InventoryScript>();
+        shopInventory.AddItem(itemToGive);
     }
 }

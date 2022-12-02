@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e32b314ab901faa4fbad141e94f614f8, type: 3}
   m_Name: Shop Inventory
   m_EditorClassIdentifier: 
+  maxContainerSize: 8
   Container:
-  - item: {fileID: 11400000, guid: 470af1ae9a3c58d4d98b8529b2dd5eda, type: 2}
-    amount: 13
   - item: {fileID: 11400000, guid: e4df032413423654f802c10d53cd79b9, type: 2}
-    amount: 9
+    amount: 3
+  - item: {fileID: 11400000, guid: e4df032413423654f802c10d53cd79b9, type: 2}
+    amount: 2
+  - item: {fileID: 11400000, guid: e4df032413423654f802c10d53cd79b9, type: 2}
+    amount: 1
   - item: {fileID: 11400000, guid: f0bdf282a0eb2c24b86271e193873fed, type: 2}
-    amount: 9
+    amount: 2

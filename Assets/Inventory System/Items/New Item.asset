@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4da50240cdcda04484e5c50e69ad69a, type: 3}
-  m_Name: Jacket
+  m_Script: {fileID: 11500000, guid: a8f4240e064942741a494c7976ceeacb, type: 3}
+  m_Name: New Item
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1881034860169458189, guid: 0a958782878fd5a48bfb18bd24db118d, type: 3}
-  type: 1
-  description: This is an equipment.
+  displayName: Generic Item
+  displayIcon: {fileID: 21300000, guid: 559af29d40a26fc44997bbb15c5b4a45, type: 3}
